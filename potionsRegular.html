@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+
+<body style="background-color:peachpuff">
+
+
+    <header>
+        
+            <h1>Role Playing Game Randomizer!</h1>
+        <nav class="topnav">
+            <a class="active" href="index.html">Home</a>
+            <a href="potions.html">Potions </a>
+            <a href="status.html">Status Effects</a>
+            <a href="NPC.html">NPCs</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+        </nav>
+       
+    </header>
+
+    <!-- Side Navigation Bar -->
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a class="active" href="index.html">Home</a>
+        <a href="potions.html">Potions </a>
+        <a href="status.html">Status Effects</a>
+        <a href="NPC.html">NPCs</a>
+        <a href="Blacksmith.html">Blacksmith</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+    </div>
+
+
+    <a id="sideNavSpan" class="sideNavMain" style="font-size:30px; font-family:'Old English Text MT'; cursor:pointer"
+       onmouseover="mouseoverSideNav()" onmouseout="mouseoutSideNav()" onclick="openNav()">
+        &#9776;
+    </a>
+
+    <!-- End Side Navigation Bar-->
+
+    <h1 class="potionTitle">Welcome to my shop! Big Fat Potions!</h1>
+
+    <p class="potionSideText">
+        Hello! Welcome to the potion shop. <br>
+        Feel free to explore the shop and test out some fun combinations.<br>
+        These potions can be used in most fantasy RPGs.
+
+    </p>
+
+    <p class="potionDescription" id="potionStory">
+        TEST
+
+    </p>
+
+
+    <img class="potionImage" src="potion.jpg" />
+
+    <!-- Potion results -->
+
+    <div class="flex-Potion">
+        <div id="potionFinal" class="potionFinal"> Test </div>
+        <div id="potionPower">POWER</div>
+        <div id="potionType"> TYPE!</div>
+        <div id="potionImage">Use default picture</div>
+    </div>
+
+
+    <div class="flex-ButtonPotionRandom">
+        <button onClick="GetPotionType(); PotionDescription()">Potion Type</button>
+        <button onClick="GetPotionPower(); PotionDescription()">Potion Power</button>
+        <button onClick="GetPotionType(); GetPotionPower(); PotionDescription()">Click for both</button>
+
+
+
+    </div>
+
+    <!---  <p id="potionFinal" class="potionFinal">Potion descriptions will go here</p> -->
+    <!-- Dice Roller -->
+
+    <div class="flex-DiceRoller">
+        <button onClick="RollDice6()">ROLL 6</button>
+        <p id="diceRoll6">6</p>
+
+        <button onclick="RollDice12()">ROLL 12</button>
+        <p id="diceRoll12">12</p>
+    </div>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Working Title</title>
+</head>
+
+    <!-- <audio controls autoplay>
+         <source src="indexMusic.wav" type="audio/wave" />
+
+     </audio> -->
+
+    <header>
+
+        <!-- <h1>Role Playing Game Randomizer!</h1>
+      <nav class="topnav">
+          <a class="active" href="index.html">Home</a>
+          <a href="potions.html">Potions </a>
+          <a href="status.html">Status Effects</a>
+          <a href="NPC.html">NPCs</a>
+          <a href="#contact">Contact</a>
+          <a href="#about">About</a>
+      </nav>
+      -->
+
+    </header>
+
+    <body id="indexBody">
+
+            
+        
+
+        <!-- Side Navigation Bar -->
+
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a class="active" href="index.html">Home</a>
+            <a href="potions.html">Potions </a>
+            <a href="status.html">Status Effects</a>
+            <a href="NPC.html">NPCs</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+        </div>
+
+        <a id="sideNavSpan" class="sideNavMain" style="font-size:30px; font-family:'Old English Text MT'; cursor:pointer"
+           onmouseover="mouseoverSideNav()" onmouseout="mouseoutSideNav()" onclick="openNav()">
+            &#9776;
+        </a>
+
+
+        <!-- End Side Navigation Bar-->
+
+
+        <div class="grid-container-main">
+
+            <!--This button is to visit the alchemist!-->
+            <div>
+                <a class="link-label-main"> Potions!</a>
+                <button id="potionButton" onmouseover="playAudioPotions()" onclick="window.location.href = 'potions.html'" onmouseout="stopAudioPotions()">
+                    <img src="normalGate.webp" width="150" height="150" backround="transparent" />
+                </button>
+                <audio id="hoverAudioPotions" src="indexMusic.wav" preload="auto"></audio>
+            </div>
+
+            <!--This button is to visit the blacksmith! -->
+            <div>
+                <a class="link-label-main"> Blacksmith!!</a>
+                <button id="blackSmithButton" onmouseover="playAudioBlackSmith()" onclick="window.location.href = 'blacksmith.html'" onmouseout="stopAudioBlackSmith()">
+                    <img src="normalGate.webp" width="150" height="150" backround="transparent" />
+                </button>
+                <audio id="hoverAudioBlackSmith" src="indexMusic.wav" preload="auto"></audio>
+            </div>
+
+            <!--This button is to visit the NPC! -->
+            <div>
+                <a class="link-label-main"> NPC!!</a>
+                <button id="blackSmithButton" onmouseover="playAudioBlackSmith()" onclick="window.location.href = 'npc.html'" onmouseout="stopAudioBlackSmith()">
+                    <img src="normalGate.webp" width="150" height="150" backround="transparent" />
+                </button>
+                <audio id="hoverAudioBlackSmith" src="indexMusic.wav" preload="auto"></audio>
+            </div>
+
+
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <!--This button makes a fart sound! Test!!
+
+    <button id="fart" onmouseover="playAudiofart()" onmouseout="stopAudioFart()">
+        <img src="normalGate.webp" width="150" height="150" backround="transparent" />
+    </button>
+    <audio id="hoverAudioFart" src="wet-fart-6139.mp3" preload="auto"></audio>
+
+    -->
+        <!--This button runs the function GetCondition to pick from a status condition from the array
+    <input type="button" id="btnSearch" value="Condition" onclick="GetCondition();" />
+
+
+    <input type="button" id="btnStats" value="stats" onclick="GetStats();" />
+
+
+    <p id="stats">Stats</p>
+
+
+    <table class="table1">
+        <tr>
+            <caption></caption>
+            <th>Stats</th>
+            <th>Conditions</th>
+
+        </tr>
+        <tr>
+            <td id="condition">Condition</td>
+            <td id="stats">Stats</td>
+        </tr>
+        <tr>
+
+            <td id="button2"> <button class="button" onClick="GetStats()">Test2</button></td>
+            <td id="button3"> <button class="button">Test3</button></td>
+            <td id="button4"> <button class="button">Test4</button></td>
+            <td id="button5"> <button class="button">Test5</button></td>
+        </tr>
+    </table>
+
+    <p id="result"> LOOK! </p>
+    <p id="result2"> test </p>
+
+    -->
+
+
+    </body>

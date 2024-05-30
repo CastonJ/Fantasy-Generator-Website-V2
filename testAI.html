@@ -1,0 +1,135 @@
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fantasy Potion Generator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="testJavaScript.js"></script> 
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+
+        body {
+            font-family: 'MedievalSharp', cursive;
+            background-color: #1a1a1d;
+            color: #e6e1c5;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-top: 2rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        #potion-container {
+            margin-top: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .potion {
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 2px solid #e6e1c5;
+            border-radius: 10px;
+            padding: 1rem;
+            margin: 1rem;
+            width: 300px;
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            transition: all 0.3s ease-in-out;
+        }
+
+            .potion:hover {
+                transform: scale(1.05);
+                box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+            }
+
+            .potion h2 {
+                font-size: 2rem;
+                margin-bottom: 1rem;
+            }
+
+            .potion p {
+                font-size: 1.2rem;
+                line-height: 1.5;
+            }
+
+        #generate-btn {
+            background-color: #e6e1c5;
+            color: #1a1a1d;
+            border: none;
+            border-radius: 5px;
+            padding: 1rem 2rem;
+            font-size: 1.5rem;
+            font-family: 'MedievalSharp', cursive;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+
+            #generate-btn:hover {
+                background-color: #d4c9a8;
+                transform: scale(1.05);
+            }
+    </style>
+</head>
+<body>
+    <h1>Fantasy Potion Generator</h1>
+    <div id="potion-container"></div>
+    <button id="generate-btn"><i class="fas fa-magic"></i> Generate Potion</button>
+
+    <script>const potionContainer = document.getElementById('potion-container');
+    const generateBtn = document.getElementById('generate-btn');
+
+    const potionNames = [
+      'Elixir of Life',
+      'Potion of Invisibility',
+      'Draught of Peace',
+      'Essence of Dittany',
+      'Amortentia',
+      'Felix Felicis',
+      'Polyjuice Potion',
+      'Veritaserum',
+      'Wolfsbane Potion',
+      'Draught of Living Death'
+    
+
+    ];
+
+    const potionDescriptions = [
+      'This legendary elixir is said to grant eternal life to those who consume it.',
+      'Drink this potion and become invisible to the naked eye, perfect for stealth missions.',
+      'A soothing concoction that calms the mind and promotes inner peace.',
+      'A powerful healing potion that can mend even the deepest wounds.',
+      'The most powerful love potion in existence, it causes infatuation in the drinker.',
+      'A rare and highly coveted potion that brings good luck to the drinker.',
+      'This potion allows the drinker to transform into someone else for a short time.',
+      'A powerful truth serum that forces the drinker to tell the absolute truth.',
+      'A complex brew that allows werewolves to keep their human mind during transformation.',
+      'A deadly sleeping potion that sends the drinker into a deathlike slumber.'
+    ];
+
+    function generatePotion() {
+      const randomIndex = Math.floor(Math.random() * potionNames.length);
+      const potionName = potionNames[randomIndex];
+      const potionDescription = potionDescriptions[randomIndex];
+
+      const potionElement = document.createElement('div');
+      potionElement.classList.add('potion');
+      potionElement.innerHTML = `
+        <h2>${potionName}</h2>
+        <p>${potionDescription}</p>
+      `;
+
+      potionContainer.appendChild(potionElement);
+    }
+
+    generateBtn.addEventListener('click', generatePotion);</script>
+
+
+
+</body>
+</html>
